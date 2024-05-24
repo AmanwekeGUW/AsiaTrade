@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Asia Trade Register</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        body {
+            background-color: #FFFFCC; /* Желтый фон */
+            font-family: Arial, sans-serif; /* Шрифт */
+        }
+        .sign-up-title {
+            color: #FFD700; /* Цвет текста */
+            margin-bottom: 30px; /* Отступ снизу */
+        }
+        .centerForm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .sign-up-wrapper {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-box {
+            margin-bottom: 20px;
+        }
+        .input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #FFD700;
+            color: #FFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #FFA500;
+        }
+        .sign-up-with {
+            text-align: center;
+        }
+        .sign-up-with a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        .sign-up-with a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="centerForm">
+    <div class="sign-up-wrapper">
+        <h2 class="sign-up-title">Asia Trade Register</h2>
+        <form action="/register" method="POST">
+            <div class="input-box">
+                <span>Name</span>
+                <input type="text" name="userName" class="input" required placeholder="Enter your name">
+            </div>
+            <div class="input-box">
+                <span>Email</span>
+                <input type="email" name="userEmail" class="input" required placeholder="Enter your email">
+            </div>
+            <div class="input-box">
+                <span>Password</span>
+                <input type="password" name="password" class="input" required placeholder="Enter your password">
+            </div>
+            <div class="input-box">
+                <button type="submit" class="submit-btn">Register</button>
+            </div>
+            <a class="forgot" href="/login">Or Login</a>
+        </form>
+        <p th:text="${error}"></p>
+    </div>
+</div>
+</body>
+</html>

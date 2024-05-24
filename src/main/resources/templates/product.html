@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        body {
+            background-color: #FFFFCC; 
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+        .centerForm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .sign-up-wrapper {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .sign-up {
+            text-align: center;
+        }
+        .sign-up-title {
+            color: #FFD700; /* Цвет текста */
+            margin-bottom: 20px;
+        }
+        .input-box {
+            margin-bottom: 20px;
+        }
+        .input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #FFD700;
+            color: #FFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #FFA500;
+        }
+    </style>
+</head>
+<body>
+<div class="centerForm">
+    <div class="success">
+    </div>
+    <div class="sign-up-wrapper">
+        <div class="sign-up">
+            <h2 class="sign-up-title">Asia Trade Product Page</h2>
+            <form action="/shop/addproduct" method="POST">
+                <div class="input-box">
+                    <span>Name</span>
+                    <input type="text" name="productName" class="input" required placeholder="Enter product name">
+                </div>
+                <div class="input-box">
+                    <span>Category ID</span>
+                    <input type="number" name="catid" class="input" required placeholder="Enter category ID">
+                </div>
+                <div class="input-box">
+                    <span>Price</span>
+                    <input type="number" name="price" class="input" required placeholder="Enter price">
+                </div>
+                <div class="input-box">
+                    <button type="submit" class="submit-btn">Save</button>
+                </div>
+            </form>
+            <p th:text="${error}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

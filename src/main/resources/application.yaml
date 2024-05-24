@@ -1,0 +1,17 @@
+server:
+  port: 7777
+
+spring:
+  datasource:
+    username: postgres
+    password: store00
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+token:
+  signing:
+    secret-key: 53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855
+

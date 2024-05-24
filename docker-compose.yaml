@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/Store
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=store00
+    ports:
+      - "7777:7777"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    container_name: onlinestore
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: store00
+      POSTGRES_DB: Store
+      PGDATA: /data/Store
+    volumes:
+          - db:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: always
+volumes:
+  db:

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFFFCC; /* Желтый фон */
+            font-family: Arial, sans-serif; /* Шрифт */
+            margin: 0;
+            padding: 0;
+        }
+        .sign-up-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .sign-up {
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+        .sign-up-title {
+            color: #FFD700; /* Цвет текста */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-box {
+            margin-bottom: 20px;
+        }
+        .input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #FFD700;
+            color: #FFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #FFA500;
+        }
+    </style>
+</head>
+<body>
+<div class="sign-up-wrapper">
+    <div class="sign-up">
+        <h2 class="sign-up-title">Asia Trade Categories</h2>
+        <form id="myForm" action="/shop/addcategory" method="post">
+            <div class="input-box">
+                <span>Category ID</span>
+                <input type="number" name="id" class="input" id="category_id" placeholder="Enter ID">
+            </div>
+            <div class="input-box">
+                <span>Name</span>
+                <input type="text" id="category_name" class="input" name="categoryName" placeholder="Enter Name">
+            </div>
+            <input type="submit" class="submit-btn" value="Submit">
+        </form>
+        <p th:text="${error}"></p>
+    </div>
+</div>
+</body>
+</html>

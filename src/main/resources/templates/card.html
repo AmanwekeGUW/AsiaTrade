@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFFFCC; /* Желтый фон */
+            font-family: Arial, sans-serif; /* Шрифт */
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #FFD700; /* Цвет заголовка */
+            color: #FFF; /* Цвет текста */
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .content div {
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+        }
+        .content img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .price {
+            color: #FFA500;
+            margin-top: 10px;
+        }
+        .AL {
+            background-color: #FFD700;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: #FFF;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .edit_product,
+        .delete_product {
+            background-color: #FF6347;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: #FFF;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .edit_product:hover,
+        .delete_product:hover {
+            background-color: #CD5C5C;
+        }
+    </style>
+</head>
+<body>
+<div class="header">Asia Trade</div>
+<div class="content" th:each="product : ${products}">
+    <div>
+        <img th:src="@{/images/__${product.image}__}" alt="a" />
+        <a href=""><h2 th:text="${product.name}"> .name</h2></a>
+        <div class="contss">
+            <div> content</div>
+        </div>
+        <h4 class="price" th:text="${product.price}"> 0.00 </h4>
+        <button class="AL"><a href = "">Read more</a></button>
+        <button class="edit_product"><a href = "">Edit Product</a></button>
+        <form action = "" method="post">
+            <input type = "hidden" name = "post_id" value="">
+            <button class="delete_product" type="submit">Delete</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

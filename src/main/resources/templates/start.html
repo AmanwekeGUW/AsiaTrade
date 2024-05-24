@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://thymeleaf.org">
+<head>
+<title>ASIA TRADE KAZAKHSTAN</title>
+<style>
+#west {
+    flex-direction: row;
+    text-align: center;
+    width: 320px;
+    height: 350px;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    
+}
+body{
+    font-family: 'TildaSans',Arial,sans-serif;
+    margin: 0;
+}
+
+.start,.box{
+    background-color: black;
+    background: #000;
+    background-attachment: fixed;
+}
+.box, ul,.kurs,.reklama,.banner,.байланыстар{
+    justify-content: space-evenly;
+    list-style-type: none;
+    display: flex;
+    
+}
+div>a,li>a{
+    transition: 0.5s;
+    color: gold;
+    margin:0 40px;
+    text-decoration: none;
+}
+li>a:hover{
+    color:aliceblue;
+    font-size: 110%;
+    transition: 0.3s;
+    padding-bottom: 3px;
+    border-bottom: 3px solid red;
+}
+.logo>a>img{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    width: 140px;
+}
+.follow>a,.banner-text>p>a,.kurs-bas>div>p>a,.байланыстар>div>a{
+    text-decoration: none;
+    color: aliceblue;
+    transition: 0.3s;
+    background-color: gold;
+    padding: 8px 25px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 8px black;
+}
+.follow>a:hover,.banner-text>p>a:hover,.kurs-bas>div>p>a:hover,.paketter>div>a:hover{
+    transition: 0.3s;
+    box-shadow: none;
+}
+.box{
+    align-items: center;
+}
+.banner{
+    align-items: center;
+    margin-bottom: 50px;
+}
+.banner-img>img{
+    margin-top: 20px;
+    width: 520px;
+}
+p.banner{
+    font-size: 22px;
+}
+.kurs>div>p{
+    text-align: center;
+    color: black;
+}
+h1,h2{
+    font-size: 45px;
+    font-family: 'TildaSans',Arial,sans-serif;
+}
+span,h3{
+    text-align: center;
+    font-family: 'TildaSans',Arial,sans-serif;
+    color: gold;
+}
+.banner-text>p>a,.kurs-bas>div>p>a{
+    padding: 15px 50px;
+    border-radius: 15px;
+}
+.kurs{
+    justify-content: space-between;
+    background-clip: content-box;
+}
+.kurs-bas,.paket{
+    background-color: white;
+    padding: 2px 140px;
+    border-radius: 60px;
+    padding-bottom: 100px;
+}
+.kurs>div>img{
+    width: 340px;
+}
+.kurs>div{
+    border: 10px solid white;
+    background-color: white;
+    padding-bottom: 70px;
+}
+</style>
+
+</head>
+<body>
+<div class="start">
+        <div class="box">
+            <div class="logo"><a href="#"><img src="лог.png" alt=""></a></div>
+            <div class="menu">
+                <ul>
+                <li><a href="#">БАСТАПҚЫ ТІЗІМІ</a></li>
+                <li><a href="#басы">СЕРІКТЕСТЕР</a></li>
+                <li><a href="#west">МАШИНАЛАР ТІЗІМІ</a></li>
+                <li><a href="#мәліметтер">МӘЛІМЕТТЕР</a></li>
+                <li><a href="#байланыс">БАЙЛАНЫС ТЕЛЕФОН</a></li>
+                </ul>
+            </div>
+</div>
+</div>
+<div class="banner">
+        <div class="banner-text">
+            <h1><span>ASIA TRADE KAZAKHSTAN</span><br>Кореядан автокөліктерді тасымалдау<br></h1>
+            <p><a href="start.html?#байланыс"><b>Көлікті рәсімдеу</b></a></p>
+        </div>
+        <div class="banner-img">
+            <img src="логотип1.png" alt="banner">
+        </div>
+        </div>
+        <div class="kurs-bas" id="ақпарат">
+        <div class="kurs-text">
+            <h2>Біздің серіктестер:</h2>
+        </div>
+        <div class="kurs" id="басы">
+            <div>
+                <img src="yoko.jpg"><br>
+                <img src="кай.png">
+            </div>
+            <div>    
+                <img src="мунай.png"><br><br><br>
+                <img src="барс.png">
+            </div>
+            <div>
+                <br><img src="хели.png "><br><br><br><br><br>
+                <img src="аст.png">
+            </div>
+</div><br>
+<div class="kurs-text">
+            <h2>Машиналар тізімі:</h2>
+        <ul>
+            <li><img src="hyun.png" style="width: 140px;height: 70px;"></li>
+            <li><img src="kia.png" style="width: 140px;height: 70px;"></li>
+            <li><img src="toyota.png" style="width: 140px;height: 90px;"></li>
+            <li><img src="lexus.png" style="width: 150px;height: 70px;"></li>
+            <li><img src="mers.png" style="width: 140px;height: 70px;"></li>
+            <li><img src="bmw.png" style="width: 110px;height: 70px;"></li>
+        </ul>
+
+        </div>
+
+  <div id="west">
+
+        </div>
+     <div id="мәліметтер">
+     <div class="kurs-text">
+            <h2>Мәліметтер:</h2>
+        </div>
+        <img src="sss.png" style="width=" 1320 height="740">
+    </div><br><br><br>
+        <div class="kurs-text">
+            <h2>Байланыс телефондары:</h2>
+        </div>
+        <div class="paket" id="байланыс">
+        <div class="байланыстар">
+            <div>
+                <b><p>г. Алматы, ул. Стасова, 102</p>
+                <p>Сервисный центр</p>
+                <p>Пн-пт 09:00 – 19:00</p>
+                <p>Сб 10:00 – 16:00</p>
+                <p>+7 702 075 06 43</p></b>
+            </div>
+            <div>
+                <b><p>г. Алматы, пр. Аль-Фараби, 140А</p>
+                <p>Шоу-рум</p>
+                <p>10:00 – 22:00</p>
+                <p>Без перерывов и выходных</p>
+                <p>+7 702 775 06 43</p></b>
+            </div>
+            <div>
+                <b><p>г. Алматы, ул. Сатпаева, 192</p>
+                <p>Шоу-рум</p>
+                <p>10:00 – 22:00</p>
+                <p>Без перерывов и выходных</p>
+                <p>+7 702 077 06 43</p></b>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
